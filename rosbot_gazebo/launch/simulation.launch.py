@@ -81,6 +81,11 @@ def generate_launch_description():
             "/camera/image" + "@sensor_msgs/msg/Image" + "[ignition.msgs.Image",
             "/camera/points" + "@sensor_msgs/msg/PointCloud2" + "[ignition.msgs.PointCloudPacked",
             "/clock" + "@rosgraph_msgs/msg/Clock" + "[ignition.msgs.Clock",
+            # an IR sensor or a sonar are not implemented yet https://github.com/gazebosim/gz-sensors/issues/19
+            "/range/fl" + "@sensor_msgs/msg/LaserScan" + "[ignition.msgs.LaserScan",
+            "/range/fr" + "@sensor_msgs/msg/LaserScan" + "[ignition.msgs.LaserScan",
+            "/range/rl" + "@sensor_msgs/msg/LaserScan" + "[ignition.msgs.LaserScan",
+            "/range/rr" + "@sensor_msgs/msg/LaserScan" + "[ignition.msgs.LaserScan",
         ],
         output="screen",
     )
